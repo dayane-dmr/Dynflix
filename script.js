@@ -21,9 +21,7 @@ formSearch.onsubmit = (e) => {
 
     try {
       const res = await fetch(
-        `${API_URL}?i=tt3896198&s=${encodeURIComponent(
-          search
-        )}&apikey=${API_KEY}`
+        `${API_URL}?s=${encodeURIComponent(search)}&apikey=${API_KEY}`
       );
       const data = await res.json();
       showData(data, search);
